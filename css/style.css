@@ -1,0 +1,102 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #effabf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18vh;
+}
+
+h1 {
+    color: #7ab08e;
+    font-weight: bold;
+    font-size: 42px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;   
+    position: relative; 
+}
+
+.carta {
+    width: 135px;
+    height: 190px;
+    flex-shrink: 0;  
+    margin-top: 35px;
+    position: relative;    
+    cursor: pointer;
+}
+
+.verso {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;   
+    position: absolute; 
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    background-color: #A7E9AF; 
+}
+
+.carta-tras-virada {
+    transform: rotateY(-180deg);
+}
+
+.carta-frente {
+    transform: rotateY(180deg); 
+}
+
+.carta-frente-virada {
+    transform: rotateY(0deg);
+}
+
+img {
+    width: 110px;
+}
+
+time {
+    font-family: 'Roboto', sans-serif;
+    color: green;
+    position: absolute;
+    font-weight: bold;
+    font-size: 40px;
+    top: 8%;
+    right: 4%;
+}
+
+@media (max-width: 1080px) {
+    main {
+        width: auto;
+    }
+}
+
+@media (max-width: 420px) {
+    main {
+        max-width: 10%;
+    }
+}
+
+@media (max-width: 890px) {
+    time {
+        font-size: 20px;
+        top: 18%;
+        right: auto;
+        left: auto;
+
+    }    
+}
