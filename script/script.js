@@ -29,7 +29,7 @@ function montarJogo(){
     }    
 }
 
-function DistribCartas(){ 
+function distribCartas(){ 
     document.querySelectorAll(".carta").forEach((carta, i) => {
         const novaDivTras = document.createElement("div");
         novaDivTras.classList.add("verso");
@@ -129,7 +129,7 @@ function executaJogo(){
     relógio(); 
     montarJogo(); 
     papagaioAleatorio();
-    DistribCartas();
+    distribCartas();
 }
 
 function reiniciarJogo(){ 
